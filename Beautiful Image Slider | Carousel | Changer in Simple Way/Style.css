@@ -1,0 +1,89 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.ImageBox_1, .ImageBox_2, .ImageBox_3, .ImageBox_4
+{
+	width: 100%;
+	height: 100vh;		/* vh means view-height */
+	position: absolute;
+	top: 0;
+	left: 0;		/* top and left are HELPER PROPERTIES */
+}
+img
+{
+	width: 120%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* Used to align Image into CENTER */
+	transform: translate(-50%, -50%);
+	
+	/* To add more animation effect to Image like Zoom-out */
+	animation: Zoom_Out 3s linear infinite;
+	/* You can add more animation effects like this :)*/
+}
+@keyframes Zoom_Out
+{
+	100%
+	{
+		width: 100%;		/* Initial width was 120% so it will change
+											to 100% like Zoom-out effect*/
+	}
+}
+/*
+	For IMAGE 1 --> Slide_1 --> 0% = Visible and Else All = Hidden
+	For IMAGE 2 --> Slide_2 --> 50% = Visible and Else All = Hidden
+	For IMAGE 3 --> Slide_3 --> 75% = Visible and Else All = Hidden
+	For IMAGE 4 --> Slide_4 --> 100% = Visible and Else All = Hidden
+*/
+.ImageBox_1
+{
+	animation: Slide_1 12s linear infinite;
+}
+@keyframes Slide_1
+{
+	0% { visibility: visible; }
+	25% { visibility: hidden; }
+	50% { visibility: hidden; }
+	75% { visibility: hidden; }
+	100% { visibility: hidden; }
+}
+.ImageBox_2
+{
+	animation: Slide_2 12s linear infinite;
+}
+@keyframes Slide_2
+{
+	0% { visibility: hidden; }
+	25% { visibility: hidden; }
+	50% { visibility: visible; }
+	75% { visibility: hidden; }
+	100% { visibility: hidden; }
+}
+.ImageBox_3
+{
+	animation: Slide_3 12s linear infinite;
+}
+@keyframes Slide_3
+{
+	0% { visibility: hidden; }
+	25% { visibility: hidden; }
+	50% { visibility: hidden; }
+	75% { visibility: visible; }
+	100% { visibility: hidden; }
+}
+.ImageBox_4
+{
+	animation: Slide_4 12s linear infinite;
+}
+@keyframes Slide_4
+{
+	0% { visibility: hidden; }
+	25% { visibility: hidden; }
+	50% { visibility: hidden; }
+	75% { visibility: hidden; }
+	100% { visibility: visible; }
+}
