@@ -1,0 +1,260 @@
+/* Importing Google Font - ABeeZee */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'ABeeZee', sans-serif;
+	background-color: #ec524b;
+}
+
+h1
+{
+	font-size: 70px;
+	text-align: center;
+	margin-top: 60px;
+	color: white;
+}
+
+#hat_top
+{
+	width: 150px;
+	height: 150px;
+	background-color: black;
+	position: absolute;
+	top: -300px;
+	left: 94px;
+	z-index: 1;
+}
+
+#hat_bottom
+{
+	width: 250px;
+	height: 20px;
+	background-color: black;
+	position: absolute;
+	top: -150px;
+	left: 45px;
+	z-index: 1;
+}
+
+#hat_stripe_1
+{
+	width: 150px;
+	height: 10px;
+	background-color: white;
+	position: absolute;
+	top: 10px;
+}
+
+#hat_stripe_2
+{
+	width: 150px;
+	height: 10px;
+	background-color: white;
+	position: absolute;
+	top: 30px;
+}
+
+#hat_stripe_3
+{
+	width: 150px;
+	height: 10px;
+	background-color: white;
+	position: absolute;
+	top: 50px;
+}
+
+#hat_stripe_4
+{
+	width: 150px;
+	height: 10px;
+	background-color: white;
+	position: absolute;
+	top: 70px;
+}
+
+#circle
+{
+	width: 350px;
+	height: 350px;
+	background-color: white;
+	position: relative;
+	margin-left: 750px;
+	margin-top: 400px;
+	border-radius: 50%;
+	transition: 0.3s ease;
+}
+
+#head
+{
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	position: absolute;
+	border-radius: 50%;
+	left: 70px;
+	top: -180px;
+}
+
+#eyes
+{
+	position: relative;
+	top: -100px;
+	width: 100px;
+	z-index: 1;
+	left: 120px;
+}
+
+#eye1, #eye2
+{
+	background-color: black;
+	border-radius: 50px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+}
+
+#eye2
+{
+	/* All above properties are same and only this is 
+	   to be added so */
+	right: 0;
+}
+
+.nose
+{
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 50px solid #e8290b;
+	position: absolute;
+	left: 140px;
+	top: -60px;
+	background-color: white;
+}
+
+/* If we want to apply same style to multiple elements then
+   we use comma to do so */
+.dot_1, .dot_2
+{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	z-index: 1;
+	left: 155px;
+	top: 100px;
+	background-color: #e74292;
+}
+
+.dot_2
+{
+	top: 180px;
+}
+
+.hand_left
+{
+	position: relative;
+	width: 200px;
+	height: 10px;
+	background-color: white;
+	border-radius: 50px;
+	top: 20px;
+	left: -100px;
+	transform: rotate(45deg);
+	animation: move_left_hand 1s linear infinite;
+}
+
+.left_hand_finger_1, .left_hand_finger_2
+{
+	position: absolute;
+	width: 50px;
+	height: 10px;
+	background-color: white;
+	border-radius: 50px;
+	top: 10px;
+	left: -30px;
+	transform: rotate(330deg);
+}
+
+.left_hand_finger_2
+{
+	top: -10px;
+	transform: rotate(-330deg);
+}
+
+.hand_right
+{
+	position: relative;
+	width: 200px;
+	height: 10px;
+	background-color: white;
+	border-radius: 50px;
+	top: 10px;
+	right: -250px;
+	transform: rotate(-45deg);
+	animation: move_right_hand 1s linear infinite;
+}
+
+.right_hand_finger_1, .right_hand_finger_2
+{
+	position: absolute;
+	width: 50px;
+	height: 10px;
+	background-color: white;
+	border-radius: 50px;
+	top: 10px;
+	right: -30px;
+	transform: rotate(-330deg);
+}
+
+.right_hand_finger_2
+{
+	top: -10px;
+	right: -30px;
+	transform: rotate(330deg);
+}
+
+/* Hover Effect */
+#circle:hover
+{
+	transform: scale(1.1);
+	/* It helps to do transition in smooth way */
+	transition: 0.3s ease;
+}
+
+/* Animations here */
+@keyframes move_left_hand
+{
+	0%
+	{
+		transform: rotate(45deg);
+	}
+	50%
+	{
+		transform: rotate(60deg);
+	}
+	100%
+	{
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes move_right_hand
+{
+	0%
+	{
+		transform: rotate(-45deg);
+	}
+	50%
+	{
+		transform: rotate(-60deg);
+	}
+	100%
+	{
+		transform: rotate(-45deg);
+	}
+}
