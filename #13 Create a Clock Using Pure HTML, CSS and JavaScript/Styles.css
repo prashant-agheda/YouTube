@@ -1,0 +1,48 @@
+/* Code By Prashant Agheda (YouTube - @Coder Prashant) */
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1
+{
+	font-size: 60px;
+	text-align: center;
+	margin-top: 100px;
+}
+
+#Container
+{
+	width: 1200px;
+	height: 300px;
+	border: 20px solid black;
+	position: relative;
+	margin: auto;
+	border-radius: 50px;
+	transition: 0.5s ease;
+	margin-top: 200px;
+}
+
+#Display_Area
+{
+	font-size: 180px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#Container:hover
+{
+	background-color: lightgreen;
+	transition: 0.5s ease;
+	animation: fill_color 1s linear infinite;
+}
+
+@keyframes fill_color
+{
+	0% { width: 1200px; }
+	50% { width: 1300px; }
+	100% { width: 1200px; }
+}
