@@ -38,8 +38,7 @@ function displayTime()
 	// Storing the time in variable in below format
 	// format as = hours : minutes : seconds period
 	// example = 12 : 23 : 45 PM
-	var time = hours + ":" + minutes + ":" + seconds + " "
-													+ period;
+	var time = hours + ":" + minutes + ":" + seconds + " " + period;
 													
 	/* Displaying the Time in Display_Area div */
 	document.getElementById("Display_Area").innerHTML = time;
